@@ -22,7 +22,10 @@ global.logger = new (winston.Logger)({
 // import Main from './basic/002-operators'
 // import Main from './basic/003-datatypes'
 // import Main from './basic/004-functions'
-import Main from './basic/005-functions2'
+// import Main from './basic/005-functions2'
+// import Main from './basic/006-objects'
+// import Main from './basic/007-objects2'
+import Main from './basic/008-objects3'
 
 // =============================================================================
 // Main classes
