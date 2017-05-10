@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "web": ""
   },
   "author": "zany",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "eslint-plugin-standard": "^2.1.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
     "gulp-nodemon": "^2.1.0",
     "gulp-run": "^1.7.1",
     "gulp-sourcemaps": "^1.6.0",
