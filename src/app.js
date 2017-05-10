@@ -14,13 +14,12 @@ global.logger = new (winston.Logger)({
 })
 
 // =============================================================================
-logger.info('start')
-logger.info(`current dir: ${__dirname}`)
 
 // =============================================================================
-import Main from './basic/000-tmp'
+// Basic
+// import Main from './basic/000-tmp'
+// import Main from './basic/001-syntax'
+import Main from './basic/002-operators'
 
-let main = new Main()
-main.start()
-
-logger.debug('adf')
+// =============================================================================
+// Main classes
