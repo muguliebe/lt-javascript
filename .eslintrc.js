@@ -14,7 +14,7 @@ module.exports = {
     "indent": ["error", 2],
     "no-undef": "off",
     "space-before-function-paren": ["error", {
-        "anonymous": "always",
+        "anonymous": "never",
         "named": "never",
         "asyncArrow": "ignore"
     }],

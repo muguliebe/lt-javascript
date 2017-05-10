@@ -1,4 +1,4 @@
-var a = 5;
+var a = 5
 var b = 2
 
 var c = a + b
@@ -7,7 +7,6 @@ var e = a * b
 var f = a % b
 var g = a++
 var h = a--
-
 
 console.log(`c = a + b : ${c}`)
 console.log(`d = a / b : ${d}`)
