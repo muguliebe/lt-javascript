@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "gulp",
-    "web": ""
+    "start": "gulp"
   },
   "author": "zany",
   "license": "MIT",
