@@ -1,0 +1,18 @@
+<p id="demo" class="d-block">resize..</p>
+<button id="myBtn" class="d-block">click me</button>
+<p id="demo2" class="d-block">after click</p>
+<button id="toggle" class="d-block">toggle</button>
+
+<script>
+    window.addEventListener('resize', function() {
+        document.getElementById('demo').innerHTML = Math.random()
+    })
+    document.getElementById('myBtn').addEventListener('click', function() {
+        var a = 5
+        var b = 3
+        document.getElementById('demo2').innerHTML = a * b
+    })
+    $('#toggle').click(function() {
+        $('p').css('background-color', 'yellow')
+    })
+</script>

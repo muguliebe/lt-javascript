@@ -40,6 +40,7 @@
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/002-elements')">elements</a>
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/003-animation')">animation</a>
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/004-events')">events</a>
+                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/005-listener')">events</a>
                     </div>
                 </li>
                 <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/test')">test</a>
@@ -64,7 +65,7 @@
     <!-- Script -->
     <script>
         $(document).ready(function() {
-            $.get('./pages/basic/004-events.html', function(data) {
+            $.get('./pages/basic/005-listener.html', function(data) {
                 $('#main').html(data)
             })
         })
