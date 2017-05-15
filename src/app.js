@@ -30,6 +30,9 @@ global.logger = new (winston.Logger)({
 // =============================================================================
 // es6
 // import Main from './es6/001-arrow'
+// import Main from './es6/002-let'
+// import Main from './es6/003-const'
+import Main from './es6/004-shorthand'
 
 // =============================================================================
 // functional
@@ -39,4 +42,4 @@ global.logger = new (winston.Logger)({
 // import Main from './functional/004-reduce'
 // import Main from './functional/005-currying'
 // import Main from './functional/006-recursion'
-import Main from './functional/007-promise'
+// import Main from './functional/007-promise'
