@@ -25,7 +25,18 @@ global.logger = new (winston.Logger)({
 // import Main from './basic/005-functions2'
 // import Main from './basic/006-objects'
 // import Main from './basic/007-objects2'
-import Main from './basic/008-objects3'
+// import Main from './basic/008-objects3'
 
 // =============================================================================
-// Main classes
+// es6
+// import Main from './es6/001-arrow'
+
+// =============================================================================
+// functional
+// import Main from './functional/001-higher-order'
+// import Main from './functional/002-map'
+// import Main from './functional/003-reduce'
+// import Main from './functional/004-reduce'
+// import Main from './functional/005-currying'
+// import Main from './functional/006-recursion'
+import Main from './functional/007-promise'
