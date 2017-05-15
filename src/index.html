@@ -8,47 +8,76 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>lecture</title>
+
+    <!-- import vendors -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <header class="clearfix" style="height: 20vh; background: url(images/header.jpg) no-repeat center center; background-size: cover; margin-bottom: 20px;">
-    </header>
+    <!-- <header class="clearfix" style="height: 20vh; background: url(images/header.jpg) no-repeat center center; background-size: cover; margin-bottom: 20px;">
+    </header> -->
 
-    <div class="container">
-        <div class="jumbotron">
-            <h1 class="display-3">Javascript</h1>
-            <p class="lead">Contents..</p>
-            <hr class="my-2">
-              <div class="row">
-                <span class="col">Sytax</span>
-                <span class="col">Statement</span>
-                <span class="col">Operator</span>
-                <span class="col">Data Types</span>
-                <span class="col">Functions</span>
-                <span class="col">Objects</span>
-                <span class="col">Events</span>
-              </div>
-            <p class="lead">
-                <a class="btn btn-info btn-lg d-flex justify-content-center" href="https://www.w3schools.com/js/default.asp" role="button">W3School</a>
-            </p>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-info">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            JavaScript
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/home')">Home</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Basic
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/001-basic')">Basic</a>
+                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/002-elements')">elements</a>
+                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/003-animation')">animation</a>
+                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/004-events')">events</a>
+                    </div>
+                </li>
+                <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/test')">test</a>
+            </div>
         </div>
-        <footer class="sticky-bottom">
-          <span class="">© SK C&C 2017</span>
-        </footer>
+
+    </nav>
+
+    </div>
+    <div id="main" class="container my-2">
     </div>
 
-    <!-- import vendors -->
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <footer class="fixed-bottom card">
+        <div class="card-block text-nowrap align-middle">
+            <span class="text-center">© zany 2017</span>
+        </div>
+    </footer>
 
     <!-- import my script -->
     <script src="js/scripts.js"></script>
 
     <!-- Script -->
     <script>
+        $(document).ready(function() {
+            $.get('./pages/basic/004-events.html', function(data) {
+                $('#main').html(data)
+            })
+        })
 
+        function onNav(el, href) {
+            // change main to sub page
+            $.get(href + '.html', function(data) {
+                $('#main').html(data)
+            })
+            // add 'active' styles, only selected elments
+            $(el).parent().children().removeClass("active")
+            $(el).addClass("active")
+        }
     </script>
 </body>
 

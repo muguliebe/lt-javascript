@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header">
+        Events
+    </div>
+    <div class="card-block">
+        <a href="#" class="btn btn-success" onclick="mClick(this)">Click Me</a>
+        <a href="#" class="btn btn-primary" onmouseover="mOver(this)" onmouseout="mOut(this)">Over Me</a>
+
+        <input type="email" id="email" class="text-danger" onkeydown="onKeydown(value)" />
+    </div>
+</div>
+
+<script>
+    function mOver(obj) {
+        obj.innerHTML = "good dog"
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "Over Me"
+    }
+
+    function mClick(obj) {
+        obj.innerHTML = "clicked.."
+    }
+
+    function onKeydown(value) {
+        var el = document.getElementById('email')
+        if (validateEmail(value)) {
+            el.className = 'text-success'
+        } else {
+            el.className = 'text-danger'
+        }
+    }
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+</script>
