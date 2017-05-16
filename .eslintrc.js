@@ -14,10 +14,11 @@ module.exports = {
     "indent": ["error", 2],
     "no-undef": "off",
     "space-before-function-paren": ["error", {
-        "anonymous": "always",
+        "anonymous": "never",
         "named": "never",
         "asyncArrow": "ignore"
     }],
-    "no-unused-vars": [1, { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }]
+    "no-unused-vars": [1, { "vars": "local", "args": "after-used", "ignoreRestSiblings": false }],
+    "no-return-assign": "off"
   }
 };

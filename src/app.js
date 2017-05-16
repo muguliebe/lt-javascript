@@ -14,13 +14,32 @@ global.logger = new (winston.Logger)({
 })
 
 // =============================================================================
-logger.info('start')
-logger.info(`current dir: ${__dirname}`)
 
 // =============================================================================
-import Main from './basic/000-tmp'
+// Basic
+// import Main from './basic/000-tmp'
+// import Main from './basic/001-syntax'
+// import Main from './basic/002-operators'
+// import Main from './basic/003-datatypes'
+// import Main from './basic/004-functions'
+// import Main from './basic/005-functions2'
+// import Main from './basic/006-objects'
+// import Main from './basic/007-objects2'
+// import Main from './basic/008-objects3'
 
-let main = new Main()
-main.start()
+// =============================================================================
+// es6
+// import Main from './es6/001-arrow'
+// import Main from './es6/002-let'
+// import Main from './es6/003-const'
+import Main from './es6/004-shorthand'
 
-logger.debug('adf')
+// =============================================================================
+// functional
+// import Main from './functional/001-higher-order'
+// import Main from './functional/002-map'
+// import Main from './functional/003-reduce'
+// import Main from './functional/004-reduce'
+// import Main from './functional/005-currying'
+// import Main from './functional/006-recursion'
+// import Main from './functional/007-promise'
