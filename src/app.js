@@ -38,7 +38,8 @@ global.logger = new (winston.Logger)({
 // import Main from './es6/006-template'
 // import Main from './es6/007-assignment'
 // import Main from './es6/008-assignment'
-import Main from './es6/009-modules'
+// import Main from './es6/009-modules'
+import Main from './es6/011-promise'
 
 // =============================================================================
 // functional
