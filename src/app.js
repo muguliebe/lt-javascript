@@ -1,6 +1,7 @@
 // =============================================================================
 // init
 const winston = require('winston')
+import 'regenerator-runtime/runtime' // for async/await
 
 // =============================================================================
 // global variables
@@ -32,7 +33,15 @@ global.logger = new (winston.Logger)({
 // import Main from './es6/001-arrow'
 // import Main from './es6/002-let'
 // import Main from './es6/003-const'
-import Main from './es6/004-shorthand'
+// import Main from './es6/004-shorthand'
+// import Main from './es6/005-spread'
+// import Main from './es6/006-template'
+// import Main from './es6/007-assignment'
+// import Main from './es6/008-assignment'
+// import Main from './es6/009-modules'
+// import Main from './es6/011-promise'
+// import Main from './es6/012-generator'
+import Main from './es6/013-map'
 
 // =============================================================================
 // functional
@@ -43,3 +52,9 @@ import Main from './es6/004-shorthand'
 // import Main from './functional/005-currying'
 // import Main from './functional/006-recursion'
 // import Main from './functional/007-promise'
+
+// =============================================================================
+// async
+// import Main from './async/001-first'
+// let main = new Main()
+// main.start()
