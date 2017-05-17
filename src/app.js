@@ -19,7 +19,7 @@ global.logger = new (winston.Logger)({
 // =============================================================================
 // Basic
 // import Main from './basic/000-tmp'
-// import Main from './basic/001-syntax'
+import Main from './basic/001-syntax'
 // import Main from './basic/002-operators'
 // import Main from './basic/003-datatypes'
 // import Main from './basic/004-functions'
@@ -41,7 +41,7 @@ global.logger = new (winston.Logger)({
 // import Main from './es6/009-modules'
 // import Main from './es6/011-promise'
 // import Main from './es6/012-generator'
-import Main from './es6/013-map'
+// import Main from './es6/013-map'
 
 // =============================================================================
 // functional
@@ -55,6 +55,5 @@ import Main from './es6/013-map'
 
 // =============================================================================
 // async
-// import Main from './async/001-first'
+// import Main from './async/000-fetch'
 // let main = new Main()
-// main.start()
