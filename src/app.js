@@ -45,6 +45,7 @@ global.logger = new (winston.Logger)({
 
 // =============================================================================
 // functional
+// import Main from './functional/000-temp'
 // import Main from './functional/001-higher-order'
 // import Main from './functional/002-map'
 // import Main from './functional/003-reduce'
@@ -55,9 +56,13 @@ global.logger = new (winston.Logger)({
 
 // =============================================================================
 // async
-// import Main from './async/000-fetch'
+import Main from './async/000-fetch'
 // let main = new Main()
 
 // =============================================================================
 // node
-import Main from './node/000-tmp'
+// import Main from './node/000-tmp'
+
+// =============================================================================
+// util test
+// import './util/utilTest'
