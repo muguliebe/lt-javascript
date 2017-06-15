@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // =============================================================================
 // init
 const winston = require('winston')

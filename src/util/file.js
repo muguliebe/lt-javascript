@@ -1,15 +1,14 @@
-import path from 'path'
 import fs from 'fs'
 import readReadSync from 'recursive-readdir-sync'
 
-export default class File{
+export default class File {
   // ===========================================================================
   // 파일 리스트 리턴
   // string => array
   // ===========================================================================
   static getFiles(path) {
     return readReadSync(path)
-            .map(x => x.replace(/\\/gi, "/"))
+            .map(x => x.replace(/\\/gi, '/'))
   }
 
   // ===========================================================================
@@ -17,7 +16,7 @@ export default class File{
   // string => string
   // ===========================================================================
   static changeFileName(fileName) {
-    return fileName.substr(fileName.lastIndexOf('/')+1)
+    return fileName.substr(fileName.lastIndexOf('/') + 1)
   }
 
   // ===========================================================================
@@ -25,7 +24,7 @@ export default class File{
   // string => string
   // ===========================================================================
   static changeBaseName(fileName) {
-    const temp = fileName.substr(fileName.lastIndexOf('/')+1)
+    const temp = fileName.substr(fileName.lastIndexOf('/') + 1)
     const result = temp.substr(0, temp.lastIndexOf('.'))
     return result
   }
@@ -35,7 +34,7 @@ export default class File{
   // string => string
   // ===========================================================================
   static changeExtension(fileName) {
-    return fileName.substr(fileName.lastIndexOf('.')+1)
+    return fileName.substr(fileName.lastIndexOf('.') + 1)
   }
 
   // ===========================================================================

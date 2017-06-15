@@ -36,7 +36,7 @@ gulp.task('watch', ['lint', 'build'], function () {
   let stream = nodemon({
     script: `${dist}/app.js`,
     watch: src,
-    tasks: ['build']
+    tasks: ['lint', 'build']
   })
 
   return stream
