@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 // =============================================================================
 // init
 const winston = require('winston')
@@ -19,7 +21,7 @@ global.logger = new (winston.Logger)({
 // =============================================================================
 // Basic
 // import Main from './basic/000-tmp'
-import Main from './basic/001-syntax'
+// import Main from './basic/001-syntax'
 // import Main from './basic/002-operators'
 // import Main from './basic/003-datatypes'
 // import Main from './basic/004-functions'
@@ -45,6 +47,7 @@ import Main from './basic/001-syntax'
 
 // =============================================================================
 // functional
+// import Main from './functional/000-temp'
 // import Main from './functional/001-higher-order'
 // import Main from './functional/002-map'
 // import Main from './functional/003-reduce'
@@ -55,5 +58,13 @@ import Main from './basic/001-syntax'
 
 // =============================================================================
 // async
-// import Main from './async/000-fetch'
+import Main from './async/000-fetch'
 // let main = new Main()
+
+// =============================================================================
+// node
+// import Main from './node/000-tmp'
+
+// =============================================================================
+// util test
+// import './util/utilTest'

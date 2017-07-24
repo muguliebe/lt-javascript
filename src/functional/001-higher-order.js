@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 console.log('start')
 
 const animals = [
