@@ -17,70 +17,77 @@
 
 <body>
 
-    <!-- <header class="clearfix" style="height: 20vh; background: url(images/header.jpg) no-repeat center center; background-size: cover; margin-bottom: 20px;">
-    </header> -->
+<!-- <header class="clearfix" style="height: 20vh; background: url(images/header.jpg) no-repeat center center; background-size: cover; margin-bottom: 20px;">
+</header> -->
 
-    <nav class="navbar navbar-toggleable-md navbar-light bg-info">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            JavaScript
-        </a>
+<nav class="navbar navbar-toggleable-md navbar-light bg-info">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        JavaScript
+    </a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="navbar-nav mr-auto">
-                <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/home')">Home</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/home')">Home</a>
+            <ul>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Basic
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Basic
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/001-basic')">Basic</a>
-                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/002-elements')">elements</a>
-                        <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/003-animation')">animation</a>
+                        <a class="dropdown-item" href="#"
+                           onclick="onNav(this, './pages/basic/002-elements')">elements</a>
+                        <a class="dropdown-item" href="#"
+                           onclick="onNav(this, './pages/basic/003-animation')">animation</a>
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/004-events')">events</a>
                         <a class="dropdown-item" href="#" onclick="onNav(this, './pages/basic/005-listener')">events</a>
                     </div>
                 </li>
-                <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/promise/load')">promise</a>
-                <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/test')">test</a>
-            </div>
+            </ul>
+            <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/promise/load')">promise</a>
+            <a class="nav-item nav-link" href='#' onclick="onNav(this, './pages/test')">test</a>
         </div>
-
-    </nav>
-
-    </div>
-    <div id="main" class="container my-2">
     </div>
 
-    <footer class="fixed-bottom card">
-        <div class="card-block text-nowrap align-middle">
-            <span class="text-center">© zany 2017</span>
-        </div>
-    </footer>
+</nav>
 
-    <!-- import my script -->
-    <script src="js/scripts.js"></script>
+</div>
+<div id="main" class="container my-2">
+</div>
 
-    <!-- Script -->
-    <script>
-        $(document).ready(function() {
-            $.get('./pages/promise/load.html', function(data) {
-                $('#main').html(data)
-            })
-        })
+<footer class="fixed-bottom card">
+    <div class="card-block text-nowrap align-middle">
+        <span class="text-center">© zany 2017</span>
+    </div>
+</footer>
 
-        function onNav(el, href) {
-            // change main to sub page
-            $.get(href + '.html', function(data) {
-                $('#main').html(data)
-            })
-            // add 'active' styles, only selected elments
-            $(el).parent().children().removeClass("active")
-            $(el).addClass("active")
-        }
-    </script>
+<!-- import my script -->
+<script src="js/scripts.js"></script>
+
+<!-- Script -->
+<script>
+  $(document).ready(function () {
+    $.get('./pages/home.html', function (data) {
+      $('#main').html(data)
+    })
+  })
+
+  function onNav(el, href) {
+    // change main to sub page
+    $.get(href + '.html', function (data) {
+      $('#main').html(data)
+    })
+    // add 'active' styles, only selected elments
+    $(el).parent().children().removeClass('active')
+    $(el).addClass('active')
+  }
+</script>
 </body>
 
 </html>
