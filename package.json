@@ -10,8 +10,7 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-webserver": "^0.8.8"
+    "gulp-webserver": "^0.9.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
