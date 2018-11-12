@@ -1,10 +1,9 @@
-import Bluebird from 'bluebird'
+const bluebird = require('bluebird')
 
-export default class Main {
-  async start() {
-    logger.info('start....')
-
-    await Bluebird.delay(2000)
-    logger.info('done')
-  }
+const start = async () => {
+  console.log('start')
+  await bluebird.delay(2000)
+  console.log('end')
 }
+
+start()

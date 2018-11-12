@@ -1,15 +1,11 @@
-import GitHubApiClient from './GitHubApiClient'
+const fetchUser = require('./002-promise');
 
-export default class Main {
-  async start() {
-    logger.info('start')
-
-    const client = new GitHubApiClient()
-    try {
-      const user = await client.fetchUser('ifDontExist')
-      logger.info(user)
-    } catch (err) {
-      logger.error(`Error: ${err.message}`)
-    }
+(async () => {
+  console.log('start')
+  try {
+    const user = await fetchUser('ifDontExist')
+    console.log(user)
+  } catch (err) {
+    console.error(`Error: ${err.message}`)
   }
-}
+})()

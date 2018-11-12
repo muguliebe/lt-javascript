@@ -1,29 +1,10 @@
-import fetch from 'node-fetch'
+const axios = require('axios')
 
-export default class Main {
-  constructor() {
-    logger.info('start')
-    this.start()
-    return this
-  }
+const url = `https://api.github.com/users?page=1&per_page=10`
+axios.get(url)
+     .then(res => res.data)
+     .then(users => {
+       users.forEach(user => console.log(`${user.id} : ${user.login}`))
+     })
+     .catch(err => console.error(`error occurred : ${err}`))
 
-  start() {
-    logger.info(`index`)
-    this.showGitHubUser()
-  }
-
-  showGitHubUser() {
-    logger.info(`go?`)
-    const url = `https://api.github.com/users?page=1&per_page=100`
-    fetch(url)
-      .then(res => {
-        return res.json()
-      })
-      .then(users => {
-        users.forEach(user => {
-          logger.info(`${user.id} : ${user.login}`)
-        })
-      })
-      .catch(err => logger.error(`error occured : ${err}`))
-  }
-}

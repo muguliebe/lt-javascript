@@ -1,31 +1,28 @@
-import fetch from 'node-fetch'
+const axios = require('axios')
 
-export default class Main {
-  async start() {
-    logger.info('start....')
-    await this.showUserAndRepos('muguliebe')
-  }
+const showUserAndRepos = async (handle) => {
+  console.log(`showUserAndRepos`)
 
-  async showUserAndRepos(handle) {
-    logger.info(`showUserAndRepos`)
+  const [user, repos] = await Promise.all([
+    fetchFromGitHub(`/users/${handle}`),
+    fetchFromGitHub(`/users/${handle}/repos`)
+  ])
 
-    const [user, repos] = await Promise.all([
-      this.fetchFromGitHub(`/users/${handle}`),
-      this.fetchFromGitHub(`/users/${handle}/repos`)
-    ])
+  // let user = results[0]
+  // let repos = results[1]
 
-    // let user = results[0]
-    // let repos = results[1]
-
-    logger.info(user.name)
-    logger.info(repos.length)
-  }
-
-  async fetchFromGitHub(endpoint) {
-    const url = `https://api.github.com${endpoint}`
-    logger.info(`${url} start`)
-    const response = await fetch(url)
-    logger.info(`${url} end`)
-    return await response.json()
-  }
+  console.log(user.name)
+  console.log(repos.length)
 }
+
+const fetchFromGitHub = async (endpoint) => {
+  const url = `https://api.github.com${endpoint}`
+
+  console.log(`${url} start`)
+  const res = await axios.get(url)
+  console.log(`${url} end`)
+
+  return await res.data
+}
+
+showUserAndRepos('muguliebe')

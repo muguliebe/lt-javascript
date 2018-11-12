@@ -1,5 +1,5 @@
 /* eslint-disable */
-var d = new Promise((resolve, reject) => {
+const d = new Promise((resolve, reject) => {
   setTimeout(() => {
     if (true) {
       resolve('hello')

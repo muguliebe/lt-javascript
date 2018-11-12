@@ -4,10 +4,11 @@
 function Orange() {
   this.type = 'orange'
   this.color = 'yello'
-  this.getInfo = function() {
+  this.getInfo = function () {
     console.log(`${this.type} is ${this.color}`)
   }
 }
+
 var orange1 = new Orange()
 console.log(orange1)
 orange1.getInfo()
@@ -19,7 +20,7 @@ console.log(orange2)
 var Kiwi = {
   type: 'kiwi',
   color: 'yello',
-  getInfo: function() {
+  getInfo: function () {
     console.log(`${this.type} is ${this.color}`)
   }
 }
@@ -27,10 +28,10 @@ console.log(Kiwi)
 // var kiwi = new Kiwi() // this is error
 
 // Third
-var Apple = new function() {
+var Apple = new function () {
   this.type = 'apple'
   this.color = 'red'
-  this.getInfo = function() {
+  this.getInfo = function () {
     console.log(`${this.type} is ${this.color}`)
   }
 }

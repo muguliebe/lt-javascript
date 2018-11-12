@@ -1,4 +1,13 @@
 {
-  "presets": ["es2015", "stage-3"],
-  "plugins": ["transform-regenerator", "syntax-async-functions"]
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": { "node": "current" }
+      }
+    ]
+  ],
+  "env": {
+    "debug": { "retainLines": true }
+  }
 }
