@@ -1,23 +1,13 @@
-import fetch from 'node-fetch'
+const axios = require('axios')
 
-export default class Main {
-  constructor() {
-    logger.info('start')
-    return this
-  }
-
-  start() {
-    logger.info(`index`)
-    this.showGitHubUser()
-  }
-
-  async showGitHubUser() {
-    logger.info(`go?`)
-    const url = `https://api.github.com/users/muguliebe`
-    const response = await fetch(url)
-    const user = await response.json()
-    logger.info(user.name)
-    logger.info(user.location)
-    logger.info(user)
-  }
+const showGitHubUser = async () => {
+  console.log(`go?`)
+  const url = `https://api.github.com/users/muguliebe`
+  const res = await axios.get(url)
+  const user = res.data
+  console.log(user.name)
+  console.log(user.location)
+  console.log(user)
 }
+
+showGitHubUser()

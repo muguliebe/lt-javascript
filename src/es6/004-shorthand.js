@@ -7,9 +7,10 @@ function go() {
 let car = {
   color,
   speed,
-  go
-  // go(){ console.log('gogogo') }
-  // ["anyName"]: function(){ console.log('gogogo') }
+  go,
+  go(){ console.log('gogogo') },
+  ["anyName"]: function(){ console.log('gogogo') }
 }
 console.log(JSON.stringify(car, null, 2))
 car.go()
+car.anyName()

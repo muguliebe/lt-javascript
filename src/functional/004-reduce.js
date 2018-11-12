@@ -1,6 +1,6 @@
-import fs from 'fs'
+const fs = require('fs')
 
-var output = fs.readFileSync('src/data/data.txt', 'utf8')
+const output = fs.readFileSync('../data/data.txt', 'utf8')
   .trim()
   .split('\n')
   .map(line => line.replace('\r', ''))

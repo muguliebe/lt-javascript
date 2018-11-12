@@ -1,9 +1,9 @@
-export function sumTwo(a, b) {
+function sumTwo(a, b) {
   return a + b
 }
 
-export function sumThree(a, b, c) {
+function sumThree(a, b, c) {
   return a + b + c
 }
 
-// export {sumTwo, sumThree}
+module.exports = {sumTwo, sumThree}

@@ -1,36 +1,30 @@
-import fetch from 'node-fetch'
+const axios = require('axios')
 
-export default class Main {
-  async start() {
-    logger.info('start....')
-    await this.showUserAndRepos('muguliebe')
-  }
+const showUserAndRepos = async (handle) => {
+  console.log(`showUserAndRepos`)
 
-  async showUserAndRepos(handle) {
-    logger.info(`showUserAndRepos`)
+  let user = await fetchFromGitHub(`/users/${handle}`)
+  console.log(`first call`)
+  let repos = await fetchFromGitHub(`/users/${handle}/repos`)
+  console.log(`second call`)
 
-    // const user = await this.fetchFromGitHub(`/users/${handle}`)
-    // logger.info(`first call`)
-    // const repos = await this.fetchFromGitHub(`/users/${handle}/repos`)
-    // logger.info(`second call`)
+  // let userPromise = fetchFromGitHub(`/users/${handle}`)
+  // console.log(`first call`)
+  // let reposPromise = fetchFromGitHub(`/users/${handle}/repos`)
+  // console.log(`second call`)
+  // let user = await userPromise
+  // let repos = await reposPromise
 
-    let userPromise = this.fetchFromGitHub(`/users/${handle}`)
-    logger.info(`first call`)
-    let reposPromise = this.fetchFromGitHub(`/users/${handle}/repos`)
-    logger.info(`second call`)
-
-    let user = await userPromise
-    let repos = await reposPromise
-
-    logger.info(user.name)
-    logger.info(repos.length)
-  }
-
-  async fetchFromGitHub(endpoint) {
-    const url = `https://api.github.com${endpoint}`
-    logger.info(`${url} start`)
-    const response = await fetch(url)
-    logger.info(`${url} end`)
-    return await response.json()
-  }
+  console.log(user.name)
+  console.log('repo count:', repos.length)
 }
+
+const fetchFromGitHub = async (endpoint) => {
+  const url = `https://api.github.com${endpoint}`
+  console.log(`${url} start`)
+  const res = await axios.get(url)
+  console.log(`${url} end`)
+  return res.data
+}
+
+showUserAndRepos('muguliebe')

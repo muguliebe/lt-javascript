@@ -13,3 +13,12 @@ function addThreeThings(a, b, c) {
 }
 
 addThreeThings(...first)
+
+// =============================================================================
+function what({value, ...rest}){
+  console.log('value=', value)
+  console.log('rest=', rest)
+}
+
+const obj = {a: 'a', b:'b', value:'my'}
+what(obj)

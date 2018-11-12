@@ -12,8 +12,8 @@ let categories = [
 let makeTree = (categories, parent) => {
   let node = {}
   categories
-    .filter(c => c.parent === parent)
-    .forEach(c => node[c.id] = makeTree(categories, c.id))
+    .filter(animal => animal.parent === parent)
+    .forEach(animal => node[animal.id] = makeTree(categories, animal.id))
   return node
 }
 
