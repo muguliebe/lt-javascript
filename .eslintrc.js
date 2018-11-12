@@ -11,7 +11,7 @@ module.exports = {
     "node": true
   },
   "rules": {
-    "indent": ["error", 2],
+    "indent": ["error", 4],
     "no-undef": "off",
     "space-before-function-paren": ["error", {
         "anonymous": "never",

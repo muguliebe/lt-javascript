@@ -17,7 +17,7 @@ console.log(message2)
 
 // =============================================================================
 var fs = []
-for(var i=0; i<10; i++){ // change to let
+for(var i=0; i<2; i++){ // change to let
   fs.push(function(){
     console.log(i)
   })

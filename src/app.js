@@ -3,7 +3,6 @@
 // =============================================================================
 // init
 const winston = require('winston')
-import 'regenerator-runtime/runtime' // for async/await
 
 // =============================================================================
 // global variables

@@ -8,7 +8,7 @@ export default class File {
   // ===========================================================================
   static getFiles(path) {
     return readReadSync(path)
-            .map(x => x.replace(/\\/gi, '/'))
+      .map(x => x.replace(/\\/gi, '/'))
   }
 
   // ===========================================================================
