@@ -24,7 +24,7 @@ function changeFileName(fileName) {
 // ===========================================================================
 function changeBaseName(fileName) {
   const temp = fileName.substr(fileName.lastIndexOf('/') + 1)
-  const result = temp.substr(0, temp.lastIndexOf('.'))
+   const result = temp.substr(0, temp.lastIndexOf('.'))
   return result
 }
 

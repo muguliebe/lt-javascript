@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "lint": "lint src",
+    "lint": "eslint src",
     "build": "rimraf dist/ && babel src -d dist",
     "prestart": "yarn build",
     "start": "node dist/app.js",
@@ -25,11 +25,8 @@
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
-    "babel-polyfill": "^6.13.0",
     "bluebird": "^3.5.3",
     "lodash": "^4.17.4",
-    "node-fetch": "^1.6.3",
-    "rimraf": "^2.6.2",
-    "winston": "^2.3.0"
+    "rimraf": "^2.6.2"
   }
 }
