@@ -4,13 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "gulp"
+    "dev": "live-server --port=8080 --watch=src --open=src"
   },
   "author": "zany",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "live-server": "^1.2.0"
   },
   "dependencies": {}
 }
