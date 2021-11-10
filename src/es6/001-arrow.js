@@ -1,7 +1,7 @@
 var createGreet = function(message, name) {
   return message + ' ' + name
 }
-console.log(createGreet('hello', 'zany'))
+console.log(createGreet('hello', 'izany'))
 
 var arrowGreet = (message, name) => {
   return message + ' ' + name
