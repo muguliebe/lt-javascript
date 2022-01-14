@@ -2,33 +2,33 @@
   "name": "lt-javascript",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "scripts": {
-    "lint": "eslint src",
-    "build": "rimraf dist/ && babel src -d dist",
-    "prestart": "yarn build",
-    "start": "node dist/app.js",
-    "dev": "nodemon -w src --exec yarn start"
-  },
+  "main": "src/app.js",
   "author": "zany",
   "license": "MIT",
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "start": "node src/app.js",
+    "dw": "nodemon",
+    "dev": "cross-env NODE_ENV=dev node src/app.js"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/register": "^7.0.0",
+    "cross-env": "^7.0.3",
     "dotenv-cli": "^1.4.0",
-    "eslint": "^5.7.0",
-    "debug": ">=2.6.9",
     "fsevents": "^1.2.4",
-    "nodemon": "^1.10.2"
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.24.0",
     "bluebird": "^3.5.3",
     "lodash": ">=4.17.5",
-    "rimraf": "^2.6.2"
+    "prettier": "^2.5.1"
   }
 }
